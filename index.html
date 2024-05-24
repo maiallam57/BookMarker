@@ -3,11 +3,82 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap"
+            rel="stylesheet">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="icon" href="images/bookmark.png" />
         <title>Bookmark | Mai Allam</title>
     </head>
     <body>
+
+        <div class="container py-5">
+
+            <div class="card border-0 position-relative">
+                <div class="card-header">
+                    <h1 class="py-2 text-center">Bookmarker</h1>
+                </div>
+                <div class="card-body pb-5 mb-5">
+                    <h2 class="card-title mb-5 text-center">
+                        <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites
+                        <i class="fa-solid fa-bookmark"></i>
+                    </h2>
+
+                    <div
+                        class="w-100 d-flex flex-column">
+                        <label for="bookmarkName" class="pb-2">
+                            <i class="fa-solid fa-book-bookmark pe-2"></i>
+                            Site Name</label>
+                        <input type="text" placeholder="Bookmark Name"
+                            class="form-control mb-3 change-foucs"
+                            id="bookmarkName">
+                    </div>
+
+                    <div
+                        class="w-100 d-flex flex-column">
+                        <label for="bookmarkUrl" class="pb-2">
+                            <i class="fa-solid fa-link pe-2"></i>
+                            Site URL</label>
+                        <input type="text" placeholder="Site URL"
+                            class="form-control" id="bookmarkUrl">
+                    </div>
+
+                    <button type="submit" onclick="addWebsite()" id="addBtn"
+                        class="btn btn-danger my-3 px-5 d-block mx-auto">Submit</button>
+
+                    <button type="submit" onclick="UpdateWebsite()"
+                        id="updateBtn"
+                        class="btn btn-warning my-3 px-5 d-none mx-auto">Update</button>
+                </div>
+                <div
+                    class="card-footer text-body-secondary border-0">
+                    <div class="mb-5">
+                        <input type="text" class="form-control bg-warning"
+                            id="searchInput"
+                            placeholder="search ...">
+                    </div>
+                    <table class="table text-center bg-light">
+                        <thead>
+                            <tr>
+                                <th scope="col-3">index</th>
+                                <th scope="col-3">Website Name</th>
+                                <th scope="col-3">Visit</th>
+                                <th scope="col-3">Update</th>
+                                <th scope="col-3">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider" id="tableContent">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/script.js"></script>
