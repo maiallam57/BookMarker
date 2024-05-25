@@ -101,13 +101,39 @@ function UpdateWebsite(){
 }
 
 
-function search(searchTerm){
-    searchItems =[]
+function search(){
+    var searchTerm = searchInput.value;
+    searchItems =[];
+    var item;
     for (var index = 0; index < bookmarks.length; index++) {
-        var item = bookmarks[index];
+        item = bookmarks[index].name;
         if (item.toLowerCase().includes(searchTerm.toLowerCase())) {
-            searchItems += item;
+            searchItems += `
+            <tr>
+                <th scope="row">${index + 1}</th>
+                <th scope="row">${bookmarks[index].name}</th>
+                <th scope="row">
+                    <button class="btn btn-success"
+                        onclick="visitWebsite(${index})"
+                        data-index="${index}">
+                        <i class="fa-solid fa-eye"></i>Visit
+                    </button>
+                </th>
+                <td> <button class="btn btn-warning"
+                        onclick="getBookmarkToUpdate(${index})"
+                        data-index="${index}">
+                        <i class="fa-solid fa-pen"></i>Edit
+                    </button>
+                </td>
+                <td> 
+                    <button class="btn btn-danger"
+                        onclick="deleteBookmark(${index})"
+                        data-index="${index}">
+                        <i class="fa-solid fa-trash-can"></i>Delete
+                    </button></td>
+            </tr>
+            `  
         };
+        tableContent.innerHTML = searchItems; 
     }
-    displayBookmark();
-}
+};
