@@ -17,9 +17,9 @@
     </head>
     <body>
 
-        <div class="container py-5">
+        <div class="container py-5 my-5 card bg-warning-subtle">
 
-            <div class="card border-0 position-relative">
+            <div class="card p-5 border-0 position-relative">
                 <div class="card-header">
                     <h1 class="py-2 text-center">Bookmarker</h1>
                 </div>
@@ -50,7 +50,7 @@
                     </div>
 
                     <button type="submit" onclick="addWebsite()" id="addBtn"
-                        class="btn btn-danger my-3 px-5 d-block mx-auto">Submit</button>
+                        class="btn btn-success my-3 px-5 d-block mx-auto">Submit</button>
 
                     <button type="submit" onclick="UpdateWebsite()"
                         id="updateBtn"
@@ -59,7 +59,8 @@
                 <div
                     class="card-footer text-body-secondary border-0">
                     <div class="mb-5 form-floating ">
-                        <input type="text" class="form-control bg-warning"
+                        <input type="text"
+                            class="form-control bg-warning-subtle"
                             id="searchInput" onkeyup="search()"
                             placeholder="search ...">
                         <label for="searchInput">search ...</label>

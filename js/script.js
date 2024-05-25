@@ -8,15 +8,15 @@ var searchInput = document.getElementById("searchInput");
 var bookmarks = [];
 var bookmarkIndex;
 
-function updateLocalStorage(){
-    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-}
 
 if (localStorage.getItem("bookmarks")) {
     bookmarks = JSON.parse(localStorage.getItem("bookmarks"));
 }
 
 displayBookmark()
+function updateLocalStorage(){
+    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+}
 
 function clearForm(){
     bookmarkName.value = null;
