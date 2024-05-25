@@ -9,7 +9,7 @@
 
 body {
     font-family: "Righteous", sans-serif;
-    background-color: #f7ecde;
+    background-color: #000;
 }
 
 .card-header h1 {
@@ -50,12 +50,16 @@ h1:hover::before {
 .card-body h2 {
     font-family: "Righteous", cursive;
     font-size: 25px;
-    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-image: linear-gradient(to right, #3ca55c, #de4c12);
     background-clip: text;
     color: transparent;
     opacity: 0;
     animation: zoomOut 1s 1s forwards;
     transition: opacity 0.1s 2s ease-in, transform 0.8s;
+}
+
+.form-control{
+    box-shadow: 0 0 0 0.1rem #c3c2c2;
 }
 
 .form-control:focus {
